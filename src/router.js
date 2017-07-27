@@ -1,15 +1,24 @@
 import React, {Component} from 'react';
+import { Router, Route, hashHistory, IndexRoute,IndexRedirect } from 'react-router';
 
-export default class Main extends Component{
-    constructor(props){
-        super(props);
-    }
+import Nav from './components/nav/nav';
+import Bubble from './components/bubble/main';
 
-    render(){
-        return(
-            <div className='app-content'>
-                hello world!
-            </div>
-        )
-    }
+export default class Container extends Component{
+  constructor(props){
+    super(props);
+  }
+
+  render(){
+    return(
+      <div className='app-content'>
+        <Router history={hashHistory}>
+          <Route path="/" component={Nav}>
+            <IndexRedirect to="/bubble" />
+             <Route path="/bubble" component={Bubble}/> 
+          </Route>
+        </Router>
+      </div>
+    )
+  }
 }
