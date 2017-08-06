@@ -4,19 +4,11 @@
  */
 var webpack = require('webpack');
 var path = require('path');
-var express = require('express');
-var app = express();
-
-var staticPath = path.posix.join('/', 'static');
-app.use(staticPath, express.static('./static'));
 
 module.exports = {
     plugins: [
       new webpack.optimize.ModuleConcatenationPlugin(),
-      new webpack.HotModuleReplacementPlugin(),
-      new webpack.LoaderOptionsPlugin({
-        minimize: true
-      })
+      new webpack.HotModuleReplacementPlugin()
     ],
     entry : {
         main : path.resolve(__dirname,'./src/app.js'),
@@ -46,6 +38,7 @@ module.exports = {
     },
     devServer:{
         inline:true,
+        hot: true,
         port:3000,
         // host:'192.168.199.237'
     }

@@ -1,4 +1,3 @@
-// import './main.less';
 import React, {Component} from 'react';
 import createG2 from 'g2-react';
 import Title from '../title/title';

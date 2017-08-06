@@ -31,7 +31,7 @@
     "webpack-dev-server": "^1.16.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool eval --progress --colors --hot --inline --content-base dev",
+    "start": "webpack-dev-server --devtool eval --progress --colors --hotOnly --inline --content-base dev",
     "build": "webpack --progress --profile --colors --config webpack.pro.config.js"
   },
   "author": "mia yu",
