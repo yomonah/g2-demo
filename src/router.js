@@ -4,6 +4,7 @@ import { Router, Route, hashHistory, IndexRoute,IndexRedirect } from 'react-rout
 import Nav from './components/nav/nav';
 import Bubble from './components/bubble/main';
 import Histogram from './components/histogram/main';
+import Line from './components/line/main';
 
 export default class Container extends Component{
   constructor(props){
@@ -18,6 +19,7 @@ export default class Container extends Component{
             <IndexRedirect to="/bubble" />
              <Route path="/bubble" component={Bubble}/> 
              <Route path='/histogram' component={Histogram}/>
+             <Route path='/line' component={Line}/>
           </Route>
         </Router>
       </div>

@@ -11,7 +11,7 @@ export default class Nav extends Component{
         this.pathProps = [
             {name:'气泡图', path:'/bubble'},
             {name:'柱形图', path:'/histogram'},
-            // {name:'柱图', path:'/b'},
+            {name:'线图', path:'/line'},
             // {name:'柱图', path:'/c'},
             // {name:'柱图', path:'/d'},
         ]
